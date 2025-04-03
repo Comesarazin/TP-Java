@@ -1,0 +1,24 @@
+/* src/main/resources/com/example/java/style.css */
+.table-view {
+    -fx-background-color: #e0f7fa; /* Light blue background */
+    -fx-border-color: #0288d1; /* Blue border */
+}
+
+.table-column-header {
+    -fx-background-color: #0288d1; /* Blue header background */
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff; /* White text */
+}
+
+.table-row-cell {
+    -fx-background-color: #ffffff; /* White background for rows */
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #b3e5fc; /* Light blue for odd rows */
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #0288d1; /* Blue background for selected row */
+    -fx-text-fill: #ffffff; /* White text for selected row */
+}

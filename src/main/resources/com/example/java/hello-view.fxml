@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import com.example.java.Line?>
+
+<VBox alignment="CENTER" stylesheets="@style.css" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.java.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="welcomeText"/>
+    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+
+    <TableView fx:id="tableView">
+    <columns>
+        <TableColumn text="Période">
+            <cellValueFactory>
+                <PropertyValueFactory property="periode"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Total">
+            <cellValueFactory>
+                <PropertyValueFactory property="total"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Logement">
+            <cellValueFactory>
+                <PropertyValueFactory property="logement"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Nouriture">
+            <cellValueFactory>
+                <PropertyValueFactory property="nouriture"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Sorties">
+            <cellValueFactory>
+                <PropertyValueFactory property="sorties"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Voiture">
+            <cellValueFactory>
+                <PropertyValueFactory property="voiture"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Voyage">
+            <cellValueFactory>
+                <PropertyValueFactory property="voyage"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Impôts">
+            <cellValueFactory>
+                <PropertyValueFactory property="impots"/>
+            </cellValueFactory>
+        </TableColumn>
+        <TableColumn text="Autres">
+            <cellValueFactory>
+                <PropertyValueFactory property="autres"/>
+            </cellValueFactory>
+        </TableColumn>
+    </columns>
+    <items>
+        <FXCollections fx:factory="observableArrayList">
+            <Line periode="Janvier" total="1000" logement="300" nouriture="200" sorties="100" voiture="150" voyage="50" impots="100" autres="100"/>
+            <Line periode="Février" total="1200" logement="320" nouriture="220" sorties="120" voiture="160" voyage="60" impots="110" autres="110"/>
+            <Line periode="Mars" total="1100" logement="310" nouriture="210" sorties="110" voiture="150" voyage="50" impots="100" autres="100"/>
+            <Line periode="Avril" total="1300" logement="330" nouriture="230" sorties="130" voiture="170" voyage="70" impots="120" autres="120"/>
+            <Line periode="Mai" total="1400" logement="340" nouriture="240" sorties="140" voiture="180" voyage="80" impots="130" autres="130"/>
+            <Line periode="Juin" total="1500" logement="350" nouriture="250" sorties="150" voiture="190" voyage="90" impots="140" autres="140"/>
+            <Line periode="Juillet" total="1600" logement="360" nouriture="260" sorties="160" voiture="200" voyage="100" impots="150" autres="150"/>
+            <Line periode="Août" total="1700" logement="370" nouriture="270" sorties="170" voiture="210" voyage="110" impots="160" autres="160"/>
+            <Line periode="Septembre" total="1800" logement="380" nouriture="280" sorties="180" voiture="220" voyage="120" impots="170" autres="170"/>
+        </FXCollections>
+    </items>
+</TableView>
+    <Button text="Ajouter Ligne" onAction="#onAddLineButtonClick"/>
+        </VBox>
